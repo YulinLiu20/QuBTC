@@ -161,7 +161,7 @@ sens = pd.read_csv(D + "out30/q2_sensitivity.csv"); sens = sens[sens.grp == "L"]
 rng = sens.groupby("seg").s0_btc.agg(["min", "max"])
 segorder = [("A Confirmed migrated", "A  Confirmed migrated"), ("B Moved, still exposed", "B  Moved, still exposed"),
             ("C Active, not migrated", "C  Active, not migrated"), ("D Indeterminate", "D  Indeterminate"),
-            ("E Behaviorally unreachable (lower bound)", "E  Behaviourally unreachable"), ("Exchange/custodian", "Exchange / custodian"), ("Dust <0.01 BTC", "Small keys (<0.01 BTC)")]
+            ("E Behaviorally unreachable (lower bound)", "E  behaviorally unreachable"), ("Exchange/custodian", "Exchange / custodian"), ("Dust <0.01 BTC", "Small keys (<0.01 BTC)")]
 SEGCOL = {"A Confirmed migrated": C1, "B Moved, still exposed": C1, "C Active, not migrated": C1, "D Indeterminate": C3,
           "E Behaviorally unreachable (lower bound)": C7, "Exchange/custodian": C2, "Dust <0.01 BTC": C4}
 fig = plt.figure(figsize=(18.4 * CM, 7.2 * CM))
@@ -183,7 +183,7 @@ ax.set_xlabel("Starting exposed balance, legacy keys\n(million BTC, 8 Dec 2024)"
 panel(ax, "A", x=-0.78)
 # B composition by BTC/UTXO/keys
 st = pd.read_csv(D + "out40/q3_stock_by_cls.csv").groupby("cls")[["n_keys", "n_utxo", "btc"]].sum()
-cls = [("act", "Individual, active", C1), ("ind", "Individual, indeterminate", C3), ("dorm", "Behaviourally unreachable", C7),
+cls = [("act", "Individual, active", C1), ("ind", "Individual, indeterminate", C3), ("dorm", "behaviorally unreachable", C7),
        ("svc", "Exchange / custodian", C2), ("dust", "Small keys (<0.01 BTC)", C4)]
 ax = fig.add_subplot(gs[1])
 metrics = [("btc", "By BTC\n(7.16M)"), ("n_utxo", "By UTXO\n(99.2M)"), ("n_keys", "By key\n(14.0M)")]
@@ -230,7 +230,7 @@ for k, lab, col in sc:
     off = {"status_quo": 0.25, "quarterly_warning": -0.05, "personal_alert": -0.35, "upper_bound": 0.0}[k]
     ax.text(15.3, yend + off, lab, va="center", fontsize=6.2, color="#0b0b0b")
 ax.axhline(1.961, color=INK2, lw=0.6)
-ax.text(0.2, 1.961 - 0.12, "Behaviourally unreachable coins (1.96M)", fontsize=5.8, va="top", color=INK2)
+ax.text(0.2, 1.961 - 0.12, "behaviorally unreachable coins (1.96M)", fontsize=5.8, va="top", color=INK2)
 for yv in [5, 10, 15]: ax.axvline(yv, color="#e1e0d9", lw=0.6, zorder=0)
 ax.set_xlim(0, 15); ax.set_ylim(0, 7.6); ax.set_xticks([0, 5, 10, 15])
 ax.set_xlabel("Years after freeze date"); ax.set_ylabel("Exposed coins remaining\n(million BTC)")
