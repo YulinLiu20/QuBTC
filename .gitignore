@@ -1,0 +1,16 @@
+# local data and outputs
+dataverse/
+figs/
+out*/
+*.zip
+*.parquet
+*.csv
+*.csv.gz
+build_report_*.json
+healthcheck_report.json
+jobs.json
+build_ledger*.json
+.env
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/

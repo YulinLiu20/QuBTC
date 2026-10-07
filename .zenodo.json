@@ -1,0 +1,13 @@
+{
+  "title": "QuBTC: analysis code for 'Public warnings elicit little precaution against Bitcoin's quantum vulnerability'",
+  "upload_type": "software",
+  "description": "Analysis code (Google Colab notebooks on BigQuery and figure scripts) for a study of whether public warnings about quantum attacks on Bitcoin's signature scheme led holders of exposed keys to migrate their coins. The replication data are on Harvard Dataverse, doi:10.7910/DVN/THUHEB.",
+  "creators": [
+    {"name": "Liu, Yulin", "affiliation": "Quantum Economics AI Lab", "orcid": "0009-0001-8548-7780"}
+  ],
+  "license": "MIT",
+  "keywords": ["Bitcoin", "quantum computing", "post-quantum cryptography", "risk warnings", "precautionary behavior", "event study"],
+  "related_identifiers": [
+    {"identifier": "10.7910/DVN/THUHEB", "relation": "references", "scheme": "doi", "resource_type": "dataset"}
+  ]
+}
