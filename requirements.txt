@@ -1,0 +1,12 @@
+# Notebooks were run on Google Colab, which provides most of these packages.
+google-cloud-bigquery>=3.25
+google-cloud-bigquery-storage>=2.25
+db-dtypes>=1.2
+pandas>=2.2
+pyarrow>=16
+numpy>=1.26
+scipy>=1.11
+matplotlib>=3.8
+requests>=2.32
+pytrends>=4.9        # notebook 03 only
+# dvuploader          # notebook 90 only (installed inside the notebook)

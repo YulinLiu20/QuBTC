@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the article and the replication dataset."
+title: "QuBTC: analysis code for 'Public warnings elicit little precaution against Bitcoin's quantum vulnerability'"
+type: software
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/YulinLiu20/QuBTC"
+authors:
+  - family-names: Liu
+    given-names: Yulin
+    orcid: "https://orcid.org/0009-0001-8548-7780"
+    affiliation: "Quantum Economics AI Lab"
+    email: yulin@quantecon.ai
+keywords:
+  - Bitcoin
+  - quantum computing
+  - post-quantum cryptography
+  - risk warnings
+  - precautionary behavior
+  - event study
+references:
+  - type: dataset
+    title: "Replication data: Public warnings elicit little precaution against Bitcoin's quantum vulnerability"
+    authors:
+      - family-names: Liu
+        given-names: Yulin
+    doi: 10.7910/DVN/THUHEB
+    publisher:
+      name: Harvard Dataverse
+    year: 2026
